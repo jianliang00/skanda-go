@@ -62,6 +62,7 @@ func (state *decodeState) uint32s(size int) []uint32 {
 	return state.distanceScratch
 }
 
+// Decompress allocates an output buffer of decompressedSize and decodes src into it.
 func Decompress(src []byte, decompressedSize int) ([]byte, error) {
 	if decompressedSize < 0 {
 		return nil, ErrCorrupt
@@ -73,6 +74,7 @@ func Decompress(src []byte, decompressedSize int) ([]byte, error) {
 	return dst, nil
 }
 
+// Decode decodes src into dst. dst must have the exact decompressed size.
 func Decode(dst, src []byte) error {
 	if len(dst) > maxSharedDecoderOutputSize {
 		decodeState := decodeState{scratch: acquireByteBuffer(64 << 10)}
@@ -92,6 +94,7 @@ func Decode(dst, src []byte) error {
 	return err
 }
 
+// Decode decodes src into dst using reusable decoder state.
 func (decoder *Decoder) Decode(dst, src []byte) error {
 	if decoder == nil {
 		return Decode(dst, src)
@@ -102,6 +105,7 @@ func (decoder *Decoder) Decode(dst, src []byte) error {
 	return decodeWithState(dst, src, &decoder.state)
 }
 
+// Close releases scratch memory held by decoder.
 func (decoder *Decoder) Close() {
 	if decoder == nil {
 		return

@@ -4,6 +4,7 @@ import "math/bits"
 
 var windowLogs = [...]int{31, 24, 24, 23, 23, 22, 22, 21, 21, 20, 20}
 
+// EstimateMemory estimates the scratch memory needed for a compression run.
 func EstimateMemory(size int, level int, decSpeedBias float64) int {
 	if size <= lastBytes+1 {
 		return 0

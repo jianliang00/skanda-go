@@ -3,21 +3,38 @@ package skanda
 import "errors"
 
 var (
-	ErrCorrupt            = errors.New("skanda: corrupt input")
+	// ErrCorrupt reports malformed input or an output-size mismatch.
+	ErrCorrupt = errors.New("skanda: corrupt input")
+	// ErrUnsupportedEntropy reports a recognized stream that uses an unsupported entropy mode.
 	ErrUnsupportedEntropy = errors.New("skanda: unsupported entropy stream")
+	// ErrInterrupted reports compression stopped because a progress callback returned true.
+	ErrInterrupted = errors.New("skanda: interrupted")
 )
 
+// ProgressFunc observes compression progress.
+//
+// processedBytes is the number of source bytes consumed, and compressedBytes
+// is the number of bytes appended to the destination. Returning true stops
+// compression early and causes Encode or Compress to return ErrInterrupted.
 type ProgressFunc func(processedBytes, compressedBytes int) bool
 
+// Options contains compression settings.
 type Options struct {
 	// Level follows Skanda v1.0's public range and is clamped to 0..10.
-	Level        int
+	Level int
+	// DecSpeedBias trades compression ratio for decoder speed and is clamped to 0..1.
 	DecSpeedBias float64
-	Progress     ProgressFunc
+	// Progress observes compression progress and can interrupt long encodes.
+	Progress ProgressFunc
 }
 
+// Option configures compression.
 type Option func(*Options)
 
+// Encoder reuses compression scratch memory across calls.
+//
+// An Encoder is not safe for concurrent use. Call Close when the encoder is no
+// longer needed to release pooled scratch buffers.
 type Encoder struct {
 	state             compressState
 	levelOptions      compressorLevelOptions
@@ -27,22 +44,29 @@ type Encoder struct {
 	splitter          *blockSplitter
 }
 
+// Decoder reuses decompression scratch memory across calls.
+//
+// A Decoder is not safe for concurrent use. Call Close when the decoder is no
+// longer needed to release pooled scratch buffers.
 type Decoder struct {
 	state decodeState
 }
 
+// WithLevel sets the compression level. Values outside 0..10 are clamped.
 func WithLevel(level int) Option {
 	return func(o *Options) {
 		o.Level = level
 	}
 }
 
+// WithDecSpeedBias sets the decoder-speed bias. Values outside 0..1 are clamped.
 func WithDecSpeedBias(decSpeedBias float64) Option {
 	return func(o *Options) {
 		o.DecSpeedBias = decSpeedBias
 	}
 }
 
+// WithProgress installs a compression progress callback.
 func WithProgress(progress ProgressFunc) Option {
 	return func(o *Options) {
 		o.Progress = progress
@@ -76,6 +100,7 @@ func normalizeOptions(options []Option) Options {
 	return opts
 }
 
+// CompressBound returns a conservative upper bound for compressed output size.
 func CompressBound(size int) int {
 	if size < 0 {
 		return 0
@@ -83,6 +108,7 @@ func CompressBound(size int) int {
 	return size + size/1024 + 128
 }
 
+// IsUnsupported reports whether err indicates an unsupported encoded feature.
 func IsUnsupported(err error) bool {
 	return errors.Is(err, ErrUnsupportedEntropy)
 }

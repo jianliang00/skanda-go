@@ -156,6 +156,20 @@ func TestEncodeProgressReportsAppendedBytes(t *testing.T) {
 	}
 }
 
+func TestEncodeProgressCanInterrupt(t *testing.T) {
+	src := bytes.Repeat([]byte("interruptible progress payload "), 512)
+	prefix := []byte("existing data")
+	got, err := Encode(append([]byte(nil), prefix...), src, WithProgress(func(_, _ int) bool {
+		return true
+	}))
+	if !errors.Is(err, ErrInterrupted) {
+		t.Fatalf("Encode error = %v, want ErrInterrupted", err)
+	}
+	if !bytes.Equal(got[:len(prefix)], prefix) {
+		t.Fatal("Encode did not preserve destination prefix")
+	}
+}
+
 func TestEncoderReuseMatchesEncode(t *testing.T) {
 	cases := []struct {
 		src   []byte
@@ -277,6 +291,18 @@ func TestDecodeUsesExactDestinationSize(t *testing.T) {
 	longDst := make([]byte, len(src)+1)
 	if err := Decode(longDst, compressed); !errors.Is(err, ErrCorrupt) {
 		t.Fatalf("long destination error = %v, want ErrCorrupt", err)
+	}
+}
+
+func TestDecodeEntropyUnsupportedMode(t *testing.T) {
+	src := writeHeader(nil, 0, 3, 0)
+	pos := 0
+	_, _, err := decodeEntropy(src, &pos)
+	if !errors.Is(err, ErrUnsupportedEntropy) {
+		t.Fatalf("decodeEntropy error = %v, want ErrUnsupportedEntropy", err)
+	}
+	if !IsUnsupported(err) {
+		t.Fatalf("IsUnsupported(%v) = false, want true", err)
 	}
 }
 

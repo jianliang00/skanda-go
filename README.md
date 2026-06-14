@@ -98,7 +98,7 @@ if err := decoder.Decode(output, buffer); err != nil {
 | `CompressBound(size)` | Conservative output-capacity bound for caller buffers. |
 | `WithLevel(level)` | Select Skanda compression level `0..10`; out-of-range values are clamped. |
 | `WithDecSpeedBias(value)` | Select decode-speed bias `0..1`; out-of-range values are clamped. |
-| `WithProgress(fn)` | Observe compression progress and stop early when the callback returns true. |
+| `WithProgress(fn)` | Observe compression progress. If the callback returns true before completion, compression stops with `ErrInterrupted`. |
 
 ## Format Compatibility
 

@@ -1,9 +1,11 @@
 package skanda
 
+// Compress compresses src and returns a newly allocated Skanda stream.
 func Compress(src []byte, options ...Option) ([]byte, error) {
 	return Encode(nil, src, options...)
 }
 
+// Encode appends the compressed form of src to dst and returns the extended buffer.
 func Encode(dst, src []byte, options ...Option) ([]byte, error) {
 	if len(src) <= lastBytes+32 || len(src) > maxSharedEncoderSourceSize {
 		return encodeFresh(dst, src, options...)
@@ -64,7 +66,7 @@ func encodeFresh(dst, src []byte, options ...Option) ([]byte, error) {
 		pos = blockEnd
 		if opts.Progress != nil {
 			if opts.Progress(pos, len(dst)-baseLen) {
-				return dst, nil
+				return dst, ErrInterrupted
 			}
 		}
 	}
@@ -77,6 +79,7 @@ func encodeFresh(dst, src []byte, options ...Option) ([]byte, error) {
 	return dst, nil
 }
 
+// Encode appends the compressed form of src to dst using reusable encoder state.
 func (encoder *Encoder) Encode(dst, src []byte, options ...Option) ([]byte, error) {
 	if encoder == nil {
 		return encodeFresh(dst, src, options...)
@@ -118,7 +121,7 @@ func (encoder *Encoder) Encode(dst, src []byte, options ...Option) ([]byte, erro
 		pos = blockEnd
 		if opts.Progress != nil {
 			if opts.Progress(pos, len(dst)-baseLen) {
-				return dst, nil
+				return dst, ErrInterrupted
 			}
 		}
 	}
@@ -131,6 +134,7 @@ func (encoder *Encoder) Encode(dst, src []byte, options ...Option) ([]byte, erro
 	return dst, nil
 }
 
+// Close releases scratch memory held by encoder.
 func (encoder *Encoder) Close() {
 	if encoder == nil {
 		return

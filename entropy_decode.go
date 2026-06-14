@@ -37,6 +37,6 @@ func decodeEntropyWithState(src []byte, cpos *int, state *decodeState) ([]byte, 
 		}
 		return stream, flags, nil
 	default:
-		return nil, 0, ErrCorrupt
+		return nil, 0, ErrUnsupportedEntropy
 	}
 }
