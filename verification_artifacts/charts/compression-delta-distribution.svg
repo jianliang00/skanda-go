@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580" viewBox="0 0 1000 580">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="500.0" y="32.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#111827">Compressed Size Delta Distribution</text>
+<text x="500.0" y="58.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#6b7280">Counts by sign of Go-vs-C++ compressed-size delta</text>
+<line x1="92" y1="470.0" x2="965" y2="470.0" stroke="#e5e7eb"/>
+<text x="82.0" y="474.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">0</text>
+<line x1="92" y1="400.2" x2="965" y2="400.2" stroke="#e5e7eb"/>
+<text x="82.0" y="404.2" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">200</text>
+<line x1="92" y1="330.4" x2="965" y2="330.4" stroke="#e5e7eb"/>
+<text x="82.0" y="334.4" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">400</text>
+<line x1="92" y1="260.6" x2="965" y2="260.6" stroke="#e5e7eb"/>
+<text x="82.0" y="264.6" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">600</text>
+<line x1="92" y1="190.8" x2="965" y2="190.8" stroke="#e5e7eb"/>
+<text x="82.0" y="194.8" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">800</text>
+<line x1="92" y1="121.0" x2="965" y2="121.0" stroke="#e5e7eb"/>
+<text x="82.0" y="125.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">1000</text>
+<line x1="92" y1="51.2" x2="965" y2="51.2" stroke="#e5e7eb"/>
+<text x="82.0" y="55.2" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">1200</text>
+<rect x="122.6" y="398.8" width="49.4" height="71.2" fill="#c21b1b"/>
+<rect x="174.9" y="436.5" width="49.4" height="33.5" fill="#157f3b"/>
+<rect x="227.3" y="448.0" width="49.4" height="22.0" fill="#6b7280"/>
+<text x="201.1" y="522.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Canterbury</text>
+<rect x="340.8" y="400.5" width="49.4" height="69.5" fill="#c21b1b"/>
+<rect x="393.2" y="402.3" width="49.4" height="67.7" fill="#157f3b"/>
+<rect x="445.6" y="469.0" width="49.4" height="1.0" fill="#6b7280"/>
+<text x="419.4" y="522.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Silesia</text>
+<rect x="559.1" y="469.7" width="49.4" height="0.3" fill="#c21b1b"/>
+<rect x="611.4" y="470.0" width="49.4" height="0.0" fill="#157f3b"/>
+<rect x="663.8" y="470.0" width="49.4" height="0.0" fill="#6b7280"/>
+<text x="637.6" y="522.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">enwik8</text>
+<rect x="777.3" y="452.9" width="49.4" height="17.1" fill="#c21b1b"/>
+<rect x="829.7" y="438.6" width="49.4" height="31.4" fill="#157f3b"/>
+<rect x="882.1" y="84.0" width="49.4" height="386.0" fill="#6b7280"/>
+<text x="855.9" y="522.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Generated edge corpus</text>
+<rect x="700" y="90" width="14" height="14" fill="#c21b1b"/>
+<text x="722.0" y="102.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#374151">Go larger</text>
+<rect x="700" y="112" width="14" height="14" fill="#157f3b"/>
+<text x="722.0" y="124.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#374151">Go smaller</text>
+<rect x="700" y="134" width="14" height="14" fill="#6b7280"/>
+<text x="722.0" y="146.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#374151">Equal</text>
+</svg>

@@ -1,0 +1,3 @@
+input,input_size,encoder,level,bias,compressed_size
+"/tmp/skanda-public-corpus-enwik8/corpora/enwik8/enwik8",100000000,cpp,10,0.05,25344822
+"/tmp/skanda-public-corpus-enwik8/corpora/enwik8/enwik8",100000000,go,10,0.05,25348229

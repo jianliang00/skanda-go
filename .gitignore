@@ -1,0 +1,24 @@
+# Go build and test output
+/bin/
+/*.test
+*.out
+*.prof
+*.pprof
+coverage.txt
+coverage.out
+
+# Local fuzz and verification output
+/fuzz-report-*/
+/corpus/
+/testdata/generated/
+/verification_artifacts/tmp/
+*.tmp
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Editor and OS files
+.DS_Store
+*.swp
+*.swo

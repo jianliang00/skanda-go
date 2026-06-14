@@ -1,0 +1,26 @@
+delta_pct,dataset,input,level,bias,cpp_size,go_size
+2.3233,Silesia archived,x-ray,5,0.5,5422268,5548245
+1.9416,Silesia archived,x-ray,6,0.5,5381716,5486206
+1.7823,Canterbury,kennedy.xls,10,0.05,58184,59221
+1.7821,Canterbury,sum,10,0.5,11447,11651
+1.7155,Canterbury,kennedy.xls,6,0.05,78692,80042
+1.7153,Canterbury,kennedy.xls,9,0.5,71650,72879
+1.6915,Canterbury,kennedy.xls,7,0.5,79988,81341
+1.6441,Canterbury,kennedy.xls,8,0.05,62768,63800
+1.5735,Canterbury,sum,10,0.05,10105,10264
+1.5420,Silesia archived,x-ray,8,0.5,5306741,5388571
+1.5278,Canterbury,kennedy.xls,0,0.05,88627,89981
+1.3885,Canterbury,lcet10.txt,10,0.5,129345,131141
+1.3710,Canterbury,lcet10.txt,7,0.5,129978,131760
+1.3667,Canterbury,lcet10.txt,9,0.5,129513,131283
+1.3614,Silesia archived,x-ray,7,0.5,5320816,5393251
+1.3584,Canterbury,lcet10.txt,10,0.05,122275,123936
+1.2848,Canterbury,kennedy.xls,5,0.05,78844,79857
+1.2753,Silesia archived,x-ray,10,0.5,5250959,5317923
+1.2680,Canterbury,lcet10.txt,8,0.5,129728,131373
+1.2439,Canterbury,asyoulik.txt,6,1.0,59248,59985
+1.2232,Canterbury,kennedy.xls,9,0.05,60578,61319
+1.1992,Canterbury,lcet10.txt,9,0.05,122497,123966
+1.1802,Canterbury,lcet10.txt,7,0.05,123287,124742
+1.1607,Canterbury,lcet10.txt,8,0.05,122683,124107
+1.1116,Canterbury,plrabn12.txt,10,0.5,177754,179730

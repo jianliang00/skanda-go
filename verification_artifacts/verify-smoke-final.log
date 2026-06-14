@@ -1,0 +1,22 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/calorado/skanda-go
+cpu: Apple M4 Max
+BenchmarkCompressMixed-16      	    4688	    258575 ns/op	 760.78 MB/s	   65723 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4777	    254828 ns/op	 771.96 MB/s	   65719 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4764	    258709 ns/op	 760.38 MB/s	   65946 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4749	    255243 ns/op	 770.71 MB/s	   65719 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4734	    252079 ns/op	 780.38 MB/s	   65949 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4746	    273379 ns/op	 719.58 MB/s	   65949 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4250	    262057 ns/op	 750.67 MB/s	   65731 B/op	       2 allocs/op
+BenchmarkCompressMixed-16      	    4672	    256509 ns/op	 766.91 MB/s	   65954 B/op	       2 allocs/op
+BenchmarkDecompressMixed-16    	   32284	     35771 ns/op	5499.31 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   33553	     35862 ns/op	5485.36 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   32882	     36286 ns/op	5421.27 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   32530	     36491 ns/op	5390.82 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   33310	     36433 ns/op	5399.41 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   33290	     36284 ns/op	5421.58 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   32239	     37123 ns/op	5299.11 MB/s	       2 B/op	       0 allocs/op
+BenchmarkDecompressMixed-16    	   32638	     36933 ns/op	5326.41 MB/s	       2 B/op	       0 allocs/op
+PASS
+ok  	github.com/calorado/skanda-go	23.044s

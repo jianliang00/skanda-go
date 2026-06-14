@@ -1,0 +1,6 @@
+run_id,package,target,fuzztime,timeout,parallel,start_utc,end_utc,duration_seconds,result,exit_code,log_path,crasher_count,crasher_manifest_path
+20260612T212319Z-69778,github.com/calorado/skanda-go,FuzzRoundTrip,1s,0,,2026-06-12T21:23:20Z,2026-06-12T21:23:23Z,3,pass,0,fuzz-report-20260612T212319Z-69778/logs/FuzzRoundTrip.log,0,fuzz-report-20260612T212319Z-69778/crashers.csv
+20260612T212319Z-69778,github.com/calorado/skanda-go,FuzzDecompress,1s,0,,2026-06-12T21:23:23Z,2026-06-12T21:23:25Z,2,pass,0,fuzz-report-20260612T212319Z-69778/logs/FuzzDecompress.log,0,fuzz-report-20260612T212319Z-69778/crashers.csv
+20260612T212319Z-69778,github.com/calorado/skanda-go,FuzzCorruptStream,1s,0,,2026-06-12T21:23:25Z,2026-06-12T21:23:27Z,2,pass,0,fuzz-report-20260612T212319Z-69778/logs/FuzzCorruptStream.log,0,fuzz-report-20260612T212319Z-69778/crashers.csv
+20260612T212319Z-69778,github.com/calorado/skanda-go,FuzzOptions,1s,0,,2026-06-12T21:23:27Z,2026-06-12T21:23:30Z,3,pass,0,fuzz-report-20260612T212319Z-69778/logs/FuzzOptions.log,0,fuzz-report-20260612T212319Z-69778/crashers.csv
+20260612T212319Z-69778,github.com/calorado/skanda-go,FuzzHeader,1s,0,,2026-06-12T21:23:30Z,2026-06-12T21:23:32Z,2,pass,0,fuzz-report-20260612T212319Z-69778/logs/FuzzHeader.log,0,fuzz-report-20260612T212319Z-69778/crashers.csv

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="720" viewBox="0 0 1320 720">
+<rect x="0" y="0" width="1320" height="720" fill="#ffffff"/>
+<text x="660.0" y="34.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111827">Focused Compressed Size Delta (Go vs C++)</text>
+<line x1="250.0" y1="70" x2="250.0" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="250.0" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">-2%</text>
+<line x1="373.8" y1="70" x2="373.8" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="373.8" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">-1.5%</text>
+<line x1="497.5" y1="70" x2="497.5" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="497.5" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">-1%</text>
+<line x1="621.2" y1="70" x2="621.2" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="621.2" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">-0.5%</text>
+<line x1="745.0" y1="70" x2="745.0" y2="630" stroke="#d1d5db" stroke-width="2"/>
+<text x="745.0" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">0%</text>
+<line x1="868.8" y1="70" x2="868.8" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="868.8" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">0.5%</text>
+<line x1="992.5" y1="70" x2="992.5" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="992.5" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">1%</text>
+<line x1="1116.2" y1="70" x2="1116.2" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="1116.2" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">1.5%</text>
+<line x1="1240.0" y1="70" x2="1240.0" y2="630" stroke="#e5e7eb" stroke-width="1"/>
+<text x="1240.0" y="652.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">2%</text>
+<text x="250.0" y="60.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#16a34a">Go smaller</text>
+<text x="745.0" y="60.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#374151">C++ parity</text>
+<text x="1240.0" y="60.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#dc2626">Go larger</text>
+<text x="238.0" y="106.1" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">alice29.txt L0</text>
+<rect x="737.6" y="80.1" width="7.4" height="42.0" rx="3" fill="#16a34a"/>
+<text x="731.6" y="106.1" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#111827">-0.03%</text>
+<text x="238.0" y="168.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">alice29.txt L6</text>
+<rect x="745.0" y="142.3" width="230.2" height="42.0" rx="3" fill="#dc2626"/>
+<text x="967.2" y="168.3" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+0.93%</text>
+<text x="238.0" y="230.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">alice29.txt L10</text>
+<rect x="745.0" y="204.6" width="160.9" height="42.0" rx="3" fill="#dc2626"/>
+<text x="897.9" y="230.6" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+0.65%</text>
+<text x="238.0" y="292.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">kennedy.xls L0</text>
+<rect x="745.0" y="266.8" width="378.7" height="42.0" rx="3" fill="#dc2626"/>
+<text x="1115.7" y="292.8" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+1.53%</text>
+<text x="238.0" y="355.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">kennedy.xls L6</text>
+<rect x="745.0" y="329.0" width="425.7" height="42.0" rx="3" fill="#dc2626"/>
+<text x="1162.7" y="355.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+1.72%</text>
+<text x="238.0" y="417.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">kennedy.xls L10</text>
+<rect x="745.0" y="391.2" width="440.6" height="42.0" rx="3" fill="#dc2626"/>
+<text x="1177.6" y="417.2" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+1.78%</text>
+<text x="238.0" y="479.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">ptt5 L0</text>
+<rect x="722.7" y="453.4" width="22.3" height="42.0" rx="3" fill="#16a34a"/>
+<text x="716.7" y="479.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#111827">-0.09%</text>
+<text x="238.0" y="541.7" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">ptt5 L6</text>
+<rect x="571.8" y="515.7" width="173.2" height="42.0" rx="3" fill="#16a34a"/>
+<text x="579.8" y="541.7" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">-0.70%</text>
+<text x="238.0" y="603.9" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111827">ptt5 L10</text>
+<rect x="745.0" y="577.9" width="180.7" height="42.0" rx="3" fill="#dc2626"/>
+<text x="917.7" y="603.9" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">+0.73%</text>
+<text x="660.0" y="676.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#374151">Signed Go-vs-C++ delta (%)</text>
+<text x="250.0" y="702.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">Signed delta = (Go size - C++ size) / C++ size. Negative bars mean Go is smaller; positive bars mean Go is larger.</text>
+</svg>

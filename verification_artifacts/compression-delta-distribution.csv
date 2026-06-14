@@ -1,0 +1,5 @@
+dataset,go_larger,go_smaller,equal,total_pairs
+Canterbury,205,98,60,363
+Silesia archived,199,194,3,396
+enwik8 archived,1,0,0,1
+Generated edge corpus,49,90,1106,1245
